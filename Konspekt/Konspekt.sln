@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35913.81 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Konspekt", "Konspekt.csproj", "{A59651AC-1CE4-407F-9827-E94AC2F2D5DA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A59651AC-1CE4-407F-9827-E94AC2F2D5DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A59651AC-1CE4-407F-9827-E94AC2F2D5DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A59651AC-1CE4-407F-9827-E94AC2F2D5DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A59651AC-1CE4-407F-9827-E94AC2F2D5DA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6877D2E6-BDD4-4E07-B08D-5570EB294EA8}
+	EndGlobalSection
+EndGlobal

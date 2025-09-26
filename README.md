@@ -1,0 +1,2 @@
+# Konspekt_Sandra_Eliaser_IKTpe251
+Minu konspekt
