@@ -77,35 +77,57 @@ else
 int arv1 = 0;
     int arv2 = 0;
     Console.WriteLine("Sisesta arv 1");
+//Adresseerime moodulit "Console", punkti abil ütleme et kasutame funktsiooni WriteLine, et kasutajale öelda sõnum
+//mis asub funktsiooni taga olevate sulgude vahel, antud rida lõppeb lauselõpumärgiga
 arv1 = int.Parse(Console.ReadLine());
+// Anname teada, et kood loeks mis on kasutaja sisestatud arv1, funktsiooniga "Console". Lause õpeb lauselõpumrägiga
     Console.WriteLine("Sisesta arv 2");
+//Adresseerime moodulit "Console", punkti abil ütleme et kasutame funktsiooni WriteLine, et kasutajale öelda sõnum
+//mis asub funktsiooni taga olevate sulgude vahel, antud rida lõppeb lauselõpumärgiga
 arv2 = int.Parse(Console.ReadLine());
-    Console.WriteLine("Millist tehet soovite teha? + - / * ^");
+// Anname teada, et kood loeks mis on kasutaja sisestatud arv2, funktsiooniga "Console ja ReadLine". Lause lõpeb lauselõpumärgiga
+Console.WriteLine("Millist tehet soovite teha? + - / * ^");
+//Adresseerime moodulit "Console", punkti abil ütleme et kasutame funktsiooni WriteLine, et kasutajale öelda sõnum. Lause lõpeb lauselõpumärgiga
 string tehtetüüp = Console.ReadLine();
+//Tekitame muutuja "tehtetüüp", mille ette paneme andmetüübiks string ehk ütleme et seal on tekst, ning võrdusmärgi abil omistame talle
+// konsool rea pealt loetlu info , mis saame kasutades "Console" mooduli, ReadLine() funktsiooni. Lause lõpeb lauselõpumärgiga.
     float tulemus = 0;
+//Funktsioon float näitab et tulemus võib tulla kümnendsüsteemis olev ujukomaga arv. Lauselõpumärgiga
 if (tehtetüüp == "+")
+//Kasutame ifi et öelda "Kui on nii siis on nii" ehk siis tingimus.Tingimuse muutuja on tehtetüüp ja selle sisu on sõne "-". Kasutame sulupaari, et hoida sees olevat infot ja "", mille sees on tekst
 {
     tulemus = arv1 + arv2;
+    //tulemus on Liitmistehe muutuja arv1 ja arv 2 vahel. Lause lõppeb lõpumärgiga
 }
+// Pärast tingimust on koodiplokk {}. Koodiplokk sisaldab endas ühte rida, kus muutujasse tulemus omistatakse nüüd väärtrus jagades
+// muutuja arv1 muutujaga arv2. Lause lõppeb lauselõpumärgiga
 if (tehtetüüp == "-")
+//Kasutame ifi et öelda "Kui on nii siis on nii" ehk siis tingimus. Tingimuse muutuja on ja selle sisu on "-". tehtetüüp Kasutame sulupaari, et hoida sees olevat infot
 {
     tulemus = arv1 - arv2;
+//Tulemus on Lahutamistehe muutuja arv1 ja arv 2 vahel. Lause lõppeb lõpumärgiga
 }
 if (tehtetüüp == "/")
+//Kasutame ifi et öelda "Kui on nii siis on nii" ehk siis tingimus. Tingimuse muutuja on tehtetüüp ja selle sisu on "-" Kasutame sulupaari, et hoida sees olevat infot ja "", mille sees on tekst.
 {
     tulemus = arv1 / arv2;
+    //Tulemus on jagamistehe muutuja arv1 ja arv 2 vahel. Lause lõppeb lauselõpumärgiga
 
 }
 if (tehtetüüp == "*")
+//Kasutame ifi et öelda "Kui on nii siis on nii" ehk siis tingimus.(tingimuse muutuja on tehtetüüp) Kasutame sulupaari, et hoida sees olevat infot ja "", mille sees on tekst
 {
     tulemus = arv1 * arv2;
-
+    //Tulemus on korrutamistehe muutuja arv1 ja arv 2 vahel. Lause lõppeb lauselõpumärgiga
 }
 if (tehtetüüp == "^")
+//Kasutame ifi et öelda "Kui on nii siis on nii" ehk siis tingimus.(tingimuse muutuja on tehtetüüp) Kasutame sulupaari, et hoida sees olevat infot ja "", mille sees on tekst
 {
     tulemus = (float)Math.Pow(arv1, arv2);
+    //Tulemus on astendamine muutuja arv1 ja arv 2 vahel, kasutades moodulist "Math" punkti abil funktsiooni "Pow()" Lause lõppeb lauselõpumärgiga
 }
 Console.WriteLine(tulemus);
+// Kasutame Console ja WriteLine et anda kasutajale sõnum, sulgude sees näitab, milline sõnum antakse. Lause lõpeb lauselõpumärgiga
 
 //4. parool, if ja string andmetüüp
 Console.WriteLine($"Palun vabandust {nimi}, aga programmi edasiseks tööks on vaja parooli");
@@ -270,12 +292,13 @@ Console.WriteLine("Banana");
 // kasutatakse ka matemaatilistest tehetes
 // {} -> koodiplokk, tavaliselt pärast tingimust või funktsiooni kirjeldust.
 //   - saab ka kasutada teksti sees muutujate kuvamiseks
-// -> taane aitab arendajal aru saada millise koodiploki sees, miski on. Vajalik ka kompilaatorile
+// _ -> taane aitab arendajal aru saada millise koodiploki sees, miski on. Vajalik ka kompilaatorile
 //"banana" -> parameeter, mis antakse funktsioonile WriteLine töötle,miseks kaasa.
 // ; -> iga koodlause lõppeb komakooloniga
 
 int muutuja = 3;
 // int -> muutuja nime ees olev andmetüübi kirjeldus. See näitab ära, millist tüüpi andmed selle muutuja sees on
+// istantseerimime muutuja tulemus, mille andmetüübiks on int, ja omistame talle esialgu väärtuse 
 // = -> võrdusmärk omistab sellele muutujale mingusuguse väärtuse
 // 3 -> väärtus, mis sellele muutujale omistatakse
 
@@ -298,4 +321,22 @@ int jagamine = 1 / 1; // jagamine, esimene arv teisega
 double astendamine = Math.Pow(2, 2); //astendamine, esimene arv astendatakse teisega
 double juurimine = Math.Sqrt(2); //ruutjuur, parameetriks arv mida juuritakse
 
-//kodune ülesanne, 
+int arv = 0; //sobib
+string sõne = "abc"; //sobib
+string sisend_string = "abc"; //sobib
+//string string //ei sobi
+
+//muutuja nimeks ei sobi järgnevad sõnad:
+//abstract, as, base, bool, break, byte, case,
+//catch, char, checked, class, const,continue, decimal,
+//default, delegate, do, double, else, event,
+//explict, external, false, finally, fixed, dloat, for
+//foreach, goto, if, implicit, in, int
+//interface, internal, is, lock, long, namespace, new
+//null, object, operator, out, override, params,
+//private, protected, public, readonly, ref, return, sbyte
+//sealed, short, sizeef, stackalloc, static, string,struct
+//switch, this,throw, true, try, typeof, uint,
+//ulong, unchecked, unsafe, ushort, using, virtual, void
+//volatile, while.
+
