@@ -368,3 +368,80 @@ else if (ostusumma <1)
 {
     Console.WriteLine("Sisestatud vigane arv");
 }
+
+Console.WriteLine("Palun sisesta oma kasutajanimi");
+string kasutajanimi = "";
+do
+{
+    kasutajanimi = Console.ReadLine();
+}
+while (kasutajanimi != "user1");
+if (kasutajanimi == "user1")
+{
+    int ruudusuurus = 0;
+
+    do
+    {
+        Console.WriteLine("Kui suurt ruutu tahad?");
+        ruudusuurus = int.Parse(Console.ReadLine());
+    } while (ruudusuurus < 0 && ruudusuurus > 20);
+    char reakujund = '█';
+    string üksrida = "";
+    int tsüklimuutuja = ruudusuurus;
+    do
+    {
+        üksrida += reakujund;
+        tsüklimuutuja += 1;
+    } while (tsüklimuutuja != 0);
+    tsüklimuutuja = ruudusuurus;
+    do
+    {
+        Console.WriteLine(üksrida);
+        tsüklimuutuja -= 1;
+    } while (tsüklimuutuja != 0);
+    Console.WriteLine($"Palun, siin on sinu ruut, suurusega {ruudusuurus}x{ruudusuurus}");
+}
+/* tingimuslause osad */
+if (true) {} //katstud sõna if kutsub esile tingimuslause, mille tingimus on sulgude vahel, ning millele järgneb
+             //koodiplokk tingimuse täitumisel teostava koodiga
+else if (true) {} //kaitstud sõnad else ja if (else if) kutsuvad esile sekundaarse tingimuslause, mille tingimus
+                  //on samamoodi sulgude vahel, ning millele peab eelnema alati if või else if. Tingimuse täitmisel
+                  //ja eelneva tingimuse mittetäitmisel teostatakse koodiploki sees olev kood
+else {} // kaitstud sõna else kutsub esile järeltingimuse, millele peab eelnema kas if või else if, ning mille koodi-
+        //ploki sisu täidetakse kõikide if ja else if sees olevate tingimuste läbikukkumisel.
+
+/*loogilised tehted*/
+// && "and" -> loogilin ethe mida kasutatakse tingimuse kirjutamisel, ning mis annab positiivse vastuse (true9 juhul kui
+//       mõlemal pool && märki olevad tingimused on täidetud. Kui üks neist ei ole, siis annab negatiivse vastuse (false)
+// || "or" -> loogilin etehe, mida kasutatakse tingimuse kirjeldamisel, ning mis annab positiivse vastuse (true) siis kui
+//       vähemalt üks tingimus on täidetud. False tagastatakse siis, kui kõik tingimuse on täitmata
+// ! "not" ->  loogiline tehe, mida kasutatakse tingimuse tulemuse inverteerimiseks. Tulemus mis muidu tagastaks true, hüüumärgi
+//       puhul tagastab false, ja vastupidi -tingimus mis muidu tagastab false, hüüumärgi puhul tagastab true
+
+/* Võrduseoperaatorid */
+// == -> on võrdne. Võrdusmärkide ühel pool olev objekt peab vastama täpselt oma olemuselt võrdusmärgi teisel pool oleva objektiga
+//       ei olw sama nagu 1 võrdusmärk. Üks võrdusmärk omistab 2 kaks võrdleb,
+// != -> ei ole võrdne. Võrdusmärgi ühel pool olev objekt ei tohi olla samal kujul nagu teisel pool oleval objekt
+//       võrdusoperaator on kombinatsioon on võrdne operaatorist ja loogilisest tehtest not
+// > ->ons suurem kui märgist vaskaul pool olev objekt peaks olema suurem kui paremal pool olev objekt.
+// > -> on väiksem kui märgist  vaskul pool olev objekt peaks olema väiksem kui paremal pool olev objekt
+// >= -> on suurem kui või võrdne kui. Märgist vasakul pool olev objekt peaks olema vähemalt võrdne või suurem
+//       kui paremal pool olev objekt. Operaatori on kombinatsioon "on võrdne" ja on "suurem kui" operaatoritest.
+// <= -> ov väiksem kui võrdne Märgist vasakul pool olev objekt peaks olema vähemalt võrdne või väiksem
+//        kui paremal pool olev objekt. Operaatori on kombinatsioon "on võrdne" ja on "väiksem kui" operaatoritest.
+
+/*Omistusoperaatirud ja kiirtehted */
+int arv = 1;// = -> üksik võrdusmärk omistab muutujale väärtuse.
+arv += 1;// += -> võrdusmärk, mille ees on plus, automaatselt liidab muutujale otsa võrdusmärgi teisel pool oleva arvu
+//                asendab tehet "arv" = arv + 1" on kombinatsioon matemaatilisest tehtest "+" ja omistamisest ("+")
+arv -= 1; // -= -> võrdusmärk, mille ees on miinus automaatselt lahutab muutujast maha võrdusmärgi teisel pool oleva väärtuse
+          //       asendab tehet "arv = arv - 1" on kombinatsioon matemaatilisest tehtest "-" ja omistamisest ("-")
+          arv *= 2; // *= -> võrdusmärk, mille ees on kordusmärk, automaatselt korrutab muutuja sisu võrdusmärgi teisel pool oleva
+//                           arvu kordi. asendab tehet "arv *2" on kombinatsioon matemaatilsest tehtest "/" ja omistamisest ("=")
+arv++; // ++ -> on spetsiifiliselt ühe juurde liitmiseks lühivariant.
+arv--; //                                        lahutamiseks
+//*Tsüklid*/
+do //"do" on kaitstud sõna, mis alustab do-while tsüklit pärast mida on koodiplokk, ning ütleb et tee seda koodi.
+{
+
+} while (true); //niikaua kuni while järel tingimus on täidetud.
