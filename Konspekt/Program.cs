@@ -313,6 +313,25 @@
 //var y = 123;
 //const int z = 3; //konstant-tüüpi muutujaid ei saa muuta, need on read-only
 
+//võimalikud komposiitandmetüübid:
+// [] -> Massiiv on komposiitandmetüüp, mille sees saab olla mitu samat tüüpi lihtandmeid. Massivi tähistatakse kantsulgudega.
+//       Massiive saab olla ükskõik, millist lihtandmetüüpi massiive.
+//massiivi tekitamisel tuleb ära öelda kui pikk või suur see massiiv on
+//massiiv saab olla koostatud ka teistest massiividest
+//
+//esimene tekitusviis:
+int[] arvuMassiiv = new int[3]; // andmetüüp int väljendab et tegu on täisarvutüüpi andmega ja kantsulud väljendavad et tegu ühtlasi
+                                // ka massiiviga nimeks on "arvuMasiiv" ja võrdusmärgiga, on esimene tekitusmoodus öelda, et tegu on
+                                // uue massiiviga kasutades kaitstud sõna "new", ja sellele järgneb massiivi pikkuse sätestus "int[3]"
+                                // See tähendab et siin massiivis on 3 elementi, mis on täisarvud
+
+//teine tekitusviis: //teine massiivi tekitusviis, kus järjendi pikkuse sätestamine asemel, pannakse elemendid kohe sisse
+int[] arvuMassiiv2 = [1,2,3];
+
+// -- massiivi sisemised metoodid:
+int hasthismany = arvuMassiv.Length; // massiivi meetod "Length" mille me saame kasutusele võtta punkti abil, loendab kokku, mitu
+                                     //elementi järjendist parasjagu on
+
 ////põhilised matemaatilised tehted
 //int liitmine = 1 + 1; //liitmine, kaks arvu kokku
 //int lahutamine = 1 - 1; // lahutamine, esimene arv teisest maha
@@ -445,3 +464,16 @@ do //"do" on kaitstud sõna, mis alustab do-while tsüklit pärast mida on koodi
 {
 
 } while (true); //niikaua kuni while järel tingimus on täidetud.
+
+// 3. for
+int kogus = 6; //muutuja, mida tsükkel kasutab töötlemiseks mingisugusel kujul
+for (int k = 0; k < kogus; k++) //kaitstud sõna "for" alustab for tsüklit, pärast mida on sulud, mille vahel on kõik tsükli töö jaoks vajalik info
+                                // esimene parameeter tekitab tsükli jaoks muutuja, teine parameeter on tingimus lause
+                                // mis kontrollib tingimuse täitumist ning kolmas inkrementeerib tekitatud
+                                //muutujat "k++;" pane tähele et iga sulgude vahel oleva osa järel on lauselõpumärk. Tsükli
+                                // kontrolliv tingimuslause koosneb kolmest reast, mitte ühest, nagu while, või do-while
+                                //koodiplokk kus theakse mingi  tegevus
+                                //antud juhul tegevuseks on muutuja "k" arvu väljakuvamine
+{
+    Console.WriteLine(k);
+}
