@@ -394,7 +394,9 @@ else if (ostusumma < 21 )
 else if (ostusumma <1)
 //Kasutame tingimust else if, et kui sulgude sees olev muutuja on väiksem, kui 1
 {
+//Pärast tingimust on koodiplokk {}.
     Console.WriteLine("Sisestatud vigane arv");
+//Kasutame funktsiooni Console ja WriteLine, et kuvada tekst, mis on sulgude vahel. Lause lõpeb lauselõpumärgiga.
 }
 
 Console.WriteLine("Palun sisesta oma kasutajanimi");
