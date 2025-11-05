@@ -360,30 +360,39 @@ int hasthismany = arvuMassiv.Length; // massiivi meetod "Length" mille me saame 
 //volatile, while.
 
 Console.WriteLine("Sisesta ostusumma");
-//Adresseerime moodulit "Console", punkti abil ütleme et kasutame funktsiooni WriteLine, et kasutajale öelda sõnum. Lause lõppeb lauselõpumärgiga.
+//Adresseerime moodulit "Console", punkti abil ütleme et kasutame funktsiooni WriteLine, et kasutajale kuvada tekst. Lause lõpeb lauselõpumärgiga.
 double ostusumma = double.Parse(Console.ReadLine());
 //Kasutame double et teada anda et ostusumma võib olla kümnendsüsteemis olev komakohaga arv.  
 if (ostusumma > 100)
-//Kasutame ifi ehk tingimust, et anda teada et kui sulgude sees muutuja on suurem kui 100.
+//Kasutame ifi ehk tingimust, et anda teada et kui sulgude sees olev muutuja on vsuurem kui 100.
 {
+//Pärast tingimust on koodiplokk {}.
     Console.WriteLine("Saad 20% allahindlust!");
 //Kasutame funktsiooni Console ja WriteLine et kood kuvaks teksti mis on sulgude sees. Lause lõppeb lauselõpumärgiga
 }
-//Pärast tingimust on koodiplokk {}.
-//
 else if (ostusumma < 101 && ostusumma > 50)
+// Kasutame tingimust else if, et sulgude sees olev muutuja on väiksem kui 101 ja et muutuja on suurem kui 50
 {
+//Pärast tingimust on koodiplokk {}.
     Console.WriteLine("Saad 10% allahindlust!");
+//Kasutame funktsiooni Console ja WriteLine, et kuvada tekst, mis on sulgude vahel. Lause lõpeb lauselõpumärgiga.
 }
 else if (ostusumma < 51 && ostusumma > 20)
+// Kasutame tibgimust else if, et sulgude sees olev muutuja on väiksem, kui 51 ja kui muutuja on suurem kui 20.
 {
+//Pärast tingimust on koodiplokk {}.
     Console.WriteLine("Saad 5% allahindlust!");
+//Kasutame funktsiooni Console ja WriteLine, et kuvada tekst, mis on sulgude vahel. Lause lõpeb lauselõpumärgiga.
 }
 else if (ostusumma < 21 )
+//Kasutame tingimust else if, et sulgude sees olev muutuja on väiksem kui 21
 {
+//Pärast tingimust on koodiplokk {}.
     Console.WriteLine("Allahindlust ei saa :(");
+//Kasutame funktsiooni Console ja WriteLine, et kuvada tekst, mis on sulgude vahel. Lause lõpeb lauselõpumärgiga.
 }
 else if (ostusumma <1)
+//Kasutame tingimust else if, et kui sulgude sees olev muutuja on väiksem, kui 1
 {
     Console.WriteLine("Sisestatud vigane arv");
 }
