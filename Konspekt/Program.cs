@@ -301,18 +301,130 @@
 //// = -> võrdusmärk omistab sellele muutujale mingusuguse väärtuse
 //// 3 -> väärtus, mis sellele muutujale omistatakse
 
-internal class Program
+
+//internal class Program
 {
-    private static void Main(string[] args)
-    {
-        ////võimalikud andmetüübid:
-        int a = 1; // täisarv
-        decimal b = 2.0M; // kümnendsüsteemis olev komakohaga arv
-        float c = 3.0f; // kümnendsüsteemis olev ujukomaga arv
-        double d = 4.0d; // kümnendsüsteemis olev komakohaga arv, saame decimaliga
-        char c1 =/ string = "tekst"; // inimloetavalt kujul tekst
-        var x = "abc"; // ebamäärase tüübiga kohalik muutuja/var y = 123;
-        const int z = 3; //konstant-tüüpi muutujaid ei saa muuta, need on read-only
+    //private static void Main(string[] args)
+
+////võimalikud andmetüübid:
+//int a = 1; // täisarv
+//decimal b = 2.0M; // kümnendsüsteemis olev komakohaga arv
+//float c = 3.0f; // kümnendsüsteemis olev ujukomaga arv
+//double d = 4.0d; // kümnendsüsteemis olev komakohaga arv, saame decimaliga
+//char c1 =
+//string = "tekst"; // inimloetavalt kujul tekst
+//var x =  "abc"; // ebamäärase tüübiga kohalik muutuja
+//var y = 123;
+//const int z = 3; //konstant-tüüpi muutujaid ei saa muuta, need on read-only
+
+//võimalikud komposiitandmetüübid:
+// [] -> Massiiv on komposiitandmetüüp, mille sees saab olla mitu samat tüüpi lihtandmeid. Massivi tähistatakse kantsulgudega.
+//       Massiive saab olla ükskõik, millist lihtandmetüüpi massiive.
+//massiivi tekitamisel tuleb ära öelda kui pikk või suur see massiiv on
+//massiiv saab olla koostatud ka teistest massiividest
+//
+//esimene tekitusviis:
+//int[] arvuMassiiv = new int[3]; // andmetüüp int väljendab et tegu on täisarvutüüpi andmega ja kantsulud väljendavad et tegu ühtlasi
+//                                // ka massiiviga nimeks on "arvuMasiiv" ja võrdusmärgiga, on esimene tekitusmoodus öelda, et tegu on
+//                                // uue massiiviga kasutades kaitstud sõna "new", ja sellele järgneb massiivi pikkuse sätestus "int[3]"
+//                                // See tähendab et siin massiivis on 3 elementi, mis on täisarvud
+
+////teine tekitusviis: //teine massiivi tekitusviis, kus järjendi pikkuse sätestamine asemel, pannakse elemendid kohe sisse
+//int[] arvuMassiiv2 = [1,2,3];
+
+//// -- massiivi sisemised metoodid:
+//int hasthismany = arvuMassiv.Length; // massiivi meetod "Length" mille me saame kasutusele võtta punkti abil, loendab kokku, mitu
+                                     //elementi järjendist parasjagu on
+
+////põhilised matemaatilised tehted
+//int liitmine = 1 + 1; //liitmine, kaks arvu kokku
+//int lahutamine = 1 - 1; // lahutamine, esimene arv teisest maha
+//int korrutamine = 1 * 1; // korrutamine, esimene arv teisega
+//int jagamine = 1 / 1; // jagamine, esimene arv teisega
+//double astendamine = Math.Pow(2, 2); //astendamine, esimene arv astendatakse teisega
+//double juurimine = Math.Sqrt(2); //ruutjuur, parameetriks arv mida juuritakse
+
+//int arv = 0; //sobib
+//string sõne = "abc"; //sobib
+//string sisend_string = "abc"; //sobib
+//string string //ei sobi
+
+//muutuja nimeks ei sobi järgnevad sõnad:
+//abstract, as, base, bool, break, byte, case,
+//catch, char, checked, class, const,continue, decimal,
+//default, delegate, do, double, else, event,
+//explict, external, false, finally, fixed, dloat, for
+//foreach, goto, if, implicit, in, int
+//interface, internal, is, lock, long, namespace, new
+//null, object, operator, out, override, params,
+//private, protected, public, readonly, ref, return, sbyte
+//sealed, short, sizeef, stackalloc, static, string,struct
+//switch, this,throw, true, try, typeof, uint,
+//ulong, unchecked, unsafe, ushort, using, virtual, void
+//volatile, while.
+
+//Console.WriteLine("Sisesta ostusumma");
+////Adresseerime moodulit "Console", punkti abil ütleme et kasutame funktsiooni WriteLine, et kasutajale kuvada tekst. Lause lõpeb lauselõpumärgiga.
+//double ostusumma = double.Parse(Console.ReadLine());
+////Kasutame double et teada anda et ostusumma võib olla kümnendsüsteemis olev komakohaga arv.  
+//if (ostusumma > 100)
+////Kasutame ifi ehk tingimust, et anda teada et kui sulgude sees olev muutuja on vsuurem kui 100.
+//{
+////Pärast tingimust on koodiplokk {}.
+//    Console.WriteLine("Saad 20% allahindlust!");
+////Kasutame funktsiooni Console ja WriteLine et kood kuvaks teksti mis on sulgude sees. Lause lõppeb lauselõpumärgiga
+//}
+//else if (ostusumma < 101 && ostusumma > 50)
+//// Kasutame tingimust else if, et sulgude sees olev muutuja on väiksem kui 101 ja et muutuja on suurem kui 50
+//{
+////Pärast tingimust on koodiplokk {}.
+//    Console.WriteLine("Saad 10% allahindlust!");
+////Kasutame funktsiooni Console ja WriteLine, et kuvada tekst, mis on sulgude vahel. Lause lõpeb lauselõpumärgiga.
+//}
+//else if (ostusumma < 51 && ostusumma > 20)
+//// Kasutame tibgimust else if, et sulgude sees olev muutuja on väiksem, kui 51 ja kui muutuja on suurem kui 20.
+//{
+////Pärast tingimust on koodiplokk {}.
+//    Console.WriteLine("Saad 5% allahindlust!");
+////Kasutame funktsiooni Console ja WriteLine, et kuvada tekst, mis on sulgude vahel. Lause lõpeb lauselõpumärgiga.
+//}
+//else if (ostusumma < 21 )
+////Kasutame tingimust else if, et sulgude sees olev muutuja on väiksem kui 21
+//{
+////Pärast tingimust on koodiplokk {}.
+//    Console.WriteLine("Allahindlust ei saa :(");
+//Kasutame funktsiooni Console ja WriteLine, et kuvada tekst, mis on sulgude vahel. Lause lõpeb lauselõpumärgiga.
+//}
+//else if (ostusumma <1)
+////Kasutame tingimust else if, et kui sulgude sees olev muutuja on väiksem, kui 1
+//{
+////Pärast tingimust on koodiplokk {}.
+//    Console.WriteLine("Sisestatud vigane arv");
+////Kasutame funktsiooni Console ja WriteLine, et kuvada tekst, mis on sulgude vahel. Lause lõpeb lauselõpumärgiga.
+//}
+
+//Console.WriteLine("Palun sisesta oma kasutajanimi");
+//string kasutajanimi = "";
+//do
+//{
+//    kasutajanimi = Console.ReadLine();
+//}
+//while (kasutajanimi != "user1");
+//if (kasutajanimi == "user1")
+//{
+//    int ruudusuurus = 0;
+
+//    do
+
+//    {
+       // ////võimalikud andmetüübid:
+       // int a = 1; // täisarv
+       // decimal b = 2.0M; // kümnendsüsteemis olev komakohaga arv
+       // float c = 3.0f; // kümnendsüsteemis olev ujukomaga arv
+       // double d = 4.0d; // kümnendsüsteemis olev komakohaga arv, saame decimaliga
+       ///* char c1 =/ string*/ = "tekst"; // inimloetavalt kujul tekst
+       // var x = "abc"; // ebamäärase tüübiga kohalik muutuja/var y = 123;
+       // const int z = 3; //konstant-tüüpi muutujaid ei saa muuta, need on read-only
                          //void on adnmetüüp, mida muutujale anda ei saa. void on adnmetüüpm mida kasutatakse meetodite jms
                          //signatuurideks, et näidata tagastatava andmetüübi puudumist. Tegemist on - sõna otseses mõttes - mitte millelgagi
 
@@ -323,16 +435,16 @@ internal class Program
         //massiiv saab olla koostatud ka teistest massiividest
         //
         //esimene tekitusviis:
-        int[] arvuMassiiv = new int[3]; // andmetüüp int väljendab et tegu on täisarvutüüpi andmega ja kantsulud väljendavad et tegu ühtlasi
-                                        // ka massiiviga nimeks on "arvuMasiiv" ja võrdusmärgiga, on esimene tekitusmoodus öelda, et tegu on
-                                        // uue massiiviga kasutades kaitstud sõna "new", ja sellele järgneb massiivi pikkuse sätestus "int[3]"
-                                        // See tähendab et siin massiivis on 3 elementi, mis on täisarvud
+        //int[] arvuMassiiv = new int[3]; // andmetüüp int väljendab et tegu on täisarvutüüpi andmega ja kantsulud väljendavad et tegu ühtlasi
+        //                                // ka massiiviga nimeks on "arvuMasiiv" ja võrdusmärgiga, on esimene tekitusmoodus öelda, et tegu on
+        //                                // uue massiiviga kasutades kaitstud sõna "new", ja sellele järgneb massiivi pikkuse sätestus "int[3]"
+        //                                // See tähendab et siin massiivis on 3 elementi, mis on täisarvud
 
-        //teine tekitusviis: //teine massiivi tekitusviis, kus järjendi pikkuse sätestamine asemel, pannakse elemendid kohe sisse
-        int[] arvuMassiiv2 = [1, 2, 3];
+        ////teine tekitusviis: //teine massiivi tekitusviis, kus järjendi pikkuse sätestamine asemel, pannakse elemendid kohe sisse
+        //int[] arvuMassiiv2 = [1, 2, 3];
 
         // -- massiivi sisemised metoodid:
-        int hasthismany = arvuMassiv.Length; // massiivi meetod "Length" mille me saame kasutusele võtta punkti abil, loendab kokku, mitu
+       /* int hasthismany = arvuMassiv.Length;*/ // massiivi meetod "Length" mille me saame kasutusele võtta punkti abil, loendab kokku, mitu
                                              //elementi järjendist parasjagu on
 
         ////põhilised matemaatilised tehted
@@ -362,74 +474,74 @@ internal class Program
         //ulong, unchecked, unsafe, ushort, using, virtual, void
         //volatile, while.
 
-        Console.WriteLine("Sisesta ostusumma");
-        //Adresseerime moodulit "Console", punkti abil ütleme et kasutame funktsiooni WriteLine, et kasutajale öelda sõnum. Lause lõppeb lauselõpumärgiga.
-        double ostusumma = double.Parse(Console.ReadLine());
-        //Kasutame double et teada anda et ostusumma võib olla kümnendsüsteemis olev komakohaga arv.  
-        if (ostusumma > 100)
-        //Kasutame ifi ehk tingimust, et anda teada et kui sulgude sees muutuja on suurem kui 100.
-        {
-            Console.WriteLine("Saad 20% allahindlust!");
-            //Kasutame funktsiooni Console ja WriteLine et kood kuvaks teksti mis on sulgude sees. Lause lõppeb lauselõpumärgiga
-        }
-        //Pärast tingimust on koodiplokk {}.
-        //
-        else if (ostusumma < 101 && ostusumma > 50)
-        {
-            Console.WriteLine("Saad 10% allahindlust!");
-        }
-        else if (ostusumma < 51 && ostusumma > 20)
-        {
-            Console.WriteLine("Saad 5% allahindlust!");
-        }
-        else if (ostusumma < 21)
-        {
-            Console.WriteLine("Allahindlust ei saa :(");
-        }
-        else if (ostusumma < 1)
-        {
-            Console.WriteLine("Sisestatud vigane arv");
-        }
+        //Console.WriteLine("Sisesta ostusumma");
+        ////Adresseerime moodulit "Console", punkti abil ütleme et kasutame funktsiooni WriteLine, et kasutajale öelda sõnum. Lause lõppeb lauselõpumärgiga.
+        //double ostusumma = double.Parse(Console.ReadLine());
+        ////Kasutame double et teada anda et ostusumma võib olla kümnendsüsteemis olev komakohaga arv.  
+        //if (ostusumma > 100)
+        ////Kasutame ifi ehk tingimust, et anda teada et kui sulgude sees muutuja on suurem kui 100.
+        //{
+        //    Console.WriteLine("Saad 20% allahindlust!");
+        //    //Kasutame funktsiooni Console ja WriteLine et kood kuvaks teksti mis on sulgude sees. Lause lõppeb lauselõpumärgiga
+        //}
+        ////Pärast tingimust on koodiplokk {}.
+        ////
+        //else if (ostusumma < 101 && ostusumma > 50)
+        //{
+        //    Console.WriteLine("Saad 10% allahindlust!");
+        //}
+        //else if (ostusumma < 51 && ostusumma > 20)
+        //{
+        //    Console.WriteLine("Saad 5% allahindlust!");
+        //}
+        //else if (ostusumma < 21)
+        //{
+        //    Console.WriteLine("Allahindlust ei saa :(");
+        //}
+        //else if (ostusumma < 1)
+        //{
+        //    Console.WriteLine("Sisestatud vigane arv");
+        //}
 
-        Console.WriteLine("Palun sisesta oma kasutajanimi");
-        string kasutajanimi = "";
-        do
-        {
-            kasutajanimi = Console.ReadLine();
-        }
-        while (kasutajanimi != "user1");
-        if (kasutajanimi == "user1")
-        {
-            int ruudusuurus = 0;
+        //Console.WriteLine("Palun sisesta oma kasutajanimi");
+        //string kasutajanimi = "";
+        //do
+        //{
+        //    kasutajanimi = Console.ReadLine();
+        //}
+        //while (kasutajanimi != "user1");
+        //if (kasutajanimi == "user1")
+        //{
+        //    int ruudusuurus = 0;
 
-            do
-            {
-                Console.WriteLine("Kui suurt ruutu tahad?");
-                ruudusuurus = int.Parse(Console.ReadLine());
-            } while (ruudusuurus < 0 && ruudusuurus > 20);
-            char reakujund = '█';
-            string üksrida = "";
-            int tsüklimuutuja = ruudusuurus;
-            do
-            {
-                üksrida += reakujund;
-                tsüklimuutuja += 1;
-            } while (tsüklimuutuja != 0);
-            tsüklimuutuja = ruudusuurus;
-            do
-            {
-                Console.WriteLine(üksrida);
-                tsüklimuutuja -= 1;
-            } while (tsüklimuutuja != 0);
-            Console.WriteLine($"Palun, siin on sinu ruut, suurusega {ruudusuurus}x{ruudusuurus}");
-        }
-        /* tingimuslause osad */
-        if (true) { } //katstud sõna if kutsub esile tingimuslause, mille tingimus on sulgude vahel, ning millele järgneb
-                      //koodiplokk tingimuse täitumisel teostava koodiga
-        else if (true) { } //kaitstud sõnad else ja if (else if) kutsuvad esile sekundaarse tingimuslause, mille tingimus
-                           //on samamoodi sulgude vahel, ning millele peab eelnema alati if või else if. Tingimuse täitmisel
-                           //ja eelneva tingimuse mittetäitmisel teostatakse koodiploki sees olev kood
-        else { } // kaitstud sõna else kutsub esile järeltingimuse, millele peab eelnema kas if või else if, ning mille koodi-
+        //    do
+        //    {
+        //        Console.WriteLine("Kui suurt ruutu tahad?");
+        //        ruudusuurus = int.Parse(Console.ReadLine());
+        //    } while (ruudusuurus < 0 && ruudusuurus > 20);
+        //    char reakujund = '█';
+        //    string üksrida = "";
+        //    int tsüklimuutuja = ruudusuurus;
+        //    do
+        //    {
+        //        üksrida += reakujund;
+        //        tsüklimuutuja += 1;
+        //    } while (tsüklimuutuja != 0);
+        //    tsüklimuutuja = ruudusuurus;
+        //    do
+        //    {
+        //        Console.WriteLine(üksrida);
+        //        tsüklimuutuja -= 1;
+        //    } while (tsüklimuutuja != 0);
+        //    Console.WriteLine($"Palun, siin on sinu ruut, suurusega {ruudusuurus}x{ruudusuurus}");
+        //}
+        ///* tingimuslause osad */
+        //if (true) { } //katstud sõna if kutsub esile tingimuslause, mille tingimus on sulgude vahel, ning millele järgneb
+        //              //koodiplokk tingimuse täitumisel teostava koodiga
+        //else if (true) { } //kaitstud sõnad else ja if (else if) kutsuvad esile sekundaarse tingimuslause, mille tingimus
+        //                   //on samamoodi sulgude vahel, ning millele peab eelnema alati if või else if. Tingimuse täitmisel
+        //                   //ja eelneva tingimuse mittetäitmisel teostatakse koodiploki sees olev kood
+        //else { } // kaitstud sõna else kutsub esile järeltingimuse, millele peab eelnema kas if või else if, ning mille koodi-
                  //ploki sisu täidetakse kõikide if ja else if sees olevate tingimuste läbikukkumisel.
 
         /*loogilised tehted*/
@@ -453,34 +565,34 @@ internal class Program
         //        kui paremal pool olev objekt. Operaatori on kombinatsioon "on võrdne" ja on "väiksem kui" operaatoritest.
 
         /*Omistusoperaatirud ja kiirtehted */
-        int arv = 1;// = -> üksik võrdusmärk omistab muutujale väärtuse.
-        arv += 1;// += -> võrdusmärk, mille ees on plus, automaatselt liidab muutujale otsa võrdusmärgi teisel pool oleva arvu
-                 //                asendab tehet "arv" = arv + 1" on kombinatsioon matemaatilisest tehtest "+" ja omistamisest ("+")
-        arv -= 1; // -= -> võrdusmärk, mille ees on miinus automaatselt lahutab muutujast maha võrdusmärgi teisel pool oleva väärtuse
-                  //       asendab tehet "arv = arv - 1" on kombinatsioon matemaatilisest tehtest "-" ja omistamisest ("-")
-        arv *= 2; // *= -> võrdusmärk, mille ees on kordusmärk, automaatselt korrutab muutuja sisu võrdusmärgi teisel pool oleva
-                  //                           arvu kordi. asendab tehet "arv *2" on kombinatsioon matemaatilsest tehtest "/" ja omistamisest ("=")
-        arv++; // ++ -> on spetsiifiliselt ühe juurde liitmiseks lühivariant.
-        arv--; //                                        lahutamiseks
-               //*Tsüklid*/
-        do //"do" on kaitstud sõna, mis alustab do-while tsüklit pärast mida on koodiplokk, ning ütleb et tee seda koodi.
-        {
+    //    int arv = 1;// = -> üksik võrdusmärk omistab muutujale väärtuse.
+    //    arv += 1;// += -> võrdusmärk, mille ees on plus, automaatselt liidab muutujale otsa võrdusmärgi teisel pool oleva arvu
+    //             //                asendab tehet "arv" = arv + 1" on kombinatsioon matemaatilisest tehtest "+" ja omistamisest ("+")
+    //    arv -= 1; // -= -> võrdusmärk, mille ees on miinus automaatselt lahutab muutujast maha võrdusmärgi teisel pool oleva väärtuse
+    //              //       asendab tehet "arv = arv - 1" on kombinatsioon matemaatilisest tehtest "-" ja omistamisest ("-")
+    //    arv *= 2; // *= -> võrdusmärk, mille ees on kordusmärk, automaatselt korrutab muutuja sisu võrdusmärgi teisel pool oleva
+    //              //                           arvu kordi. asendab tehet "arv *2" on kombinatsioon matemaatilsest tehtest "/" ja omistamisest ("=")
+    //    arv++; // ++ -> on spetsiifiliselt ühe juurde liitmiseks lühivariant.
+    //    arv--; //                                        lahutamiseks
+    //           //*Tsüklid*/
+    //    do //"do" on kaitstud sõna, mis alustab do-while tsüklit pärast mida on koodiplokk, ning ütleb et tee seda koodi.
+    //    {
 
-        } while (true); //niikaua kuni while järel tingimus on täidetud.
+    //    } while (true); //niikaua kuni while järel tingimus on täidetud.
 
-        // 3. for
-        int kogus = 6; //muutuja, mida tsükkel kasutab töötlemiseks mingisugusel kujul
-        for (int k = 0; k < kogus; k++) //kaitstud sõna "for" alustab for tsüklit, pärast mida on sulud, mille vahel on kõik tsükli töö jaoks vajalik info
-                                        // esimene parameeter tekitab tsükli jaoks muutuja, teine parameeter on tingimus lause
-                                        // mis kontrollib tingimuse täitumist ning kolmas inkrementeerib tekitatud
-                                        //muutujat "k++;" pane tähele et iga sulgude vahel oleva osa järel on lauselõpumärk. Tsükli
-                                        // kontrolliv tingimuslause koosneb kolmest reast, mitte ühest, nagu while, või do-while
-                                        //koodiplokk kus theakse mingi  tegevus
-                                        //antud juhul tegevuseks on muutuja "k" arvu väljakuvamine
-        {
-            Console.WriteLine(k);
-        }
-    }
+    //    // 3. for
+    //    int kogus = 6; //muutuja, mida tsükkel kasutab töötlemiseks mingisugusel kujul
+    //    for (int k = 0; k < kogus; k++) //kaitstud sõna "for" alustab for tsüklit, pärast mida on sulud, mille vahel on kõik tsükli töö jaoks vajalik info
+    //                                    // esimene parameeter tekitab tsükli jaoks muutuja, teine parameeter on tingimus lause
+    //                                    // mis kontrollib tingimuse täitumist ning kolmas inkrementeerib tekitatud
+    //                                    //muutujat "k++;" pane tähele et iga sulgude vahel oleva osa järel on lauselõpumärk. Tsükli
+    //                                    // kontrolliv tingimuslause koosneb kolmest reast, mitte ühest, nagu while, või do-while
+    //                                    //koodiplokk kus theakse mingi  tegevus
+    //                                    //antud juhul tegevuseks on muutuja "k" arvu väljakuvamine
+    //    {
+    //        Console.WriteLine(k);
+    //    }
+    ////}
     /*meetodid*/
 
     //Meetodid on väljakutsutavad koodijupid. Meetodid teostavad tavaliselt mingeid funktsioone või tegevust.
@@ -504,33 +616,33 @@ internal class Program
     // väljakutseasukohta tagastada, ning peale returni on muutuja nimi tagastatava infoga. Peale return lauset, ei.
     //teostata mitte ühtegi muud meetodi sisu. Return toimib ka kui breakina, lõpetades siis aktiivse meetodi töö.
 
-    public static void UusMeetod()
-        {
-            Console.WriteLine("Tere");
+//    public static void UusMeetod()
+//        {
+//            Console.WriteLine("Tere");
 
-        }                              //Meetodi signatuur, mis omab juurdepääsumodifikaatorit "public", "static" ütleb, et
-                                       // ta on selle klassi oma, tagastustüüp "void" ütleb et adnmeid mete meetod ei tagasta.
-                                       // ning pärast meetodi omadusi on meetodi nimi "Uusmeetod" peale mida on sulud, kus
-                                       //parameetreid ei ole
-                                       //pärast signatuuri on koodiplokk meetodi koodiga {}
-                                       //antud juhul kuvab konsooli sõnumi
-                                       //2. tüüpi meetod - tagastab väärtuse
-int[] arvutatavadarvud = new int[] { 3, 67, 420 }; //Töödeldavad andmeid, mis asuvad täisarvumasiivis, muutujanimega
-                                                   //"arvutavadarvud.
+//        }                              //Meetodi signatuur, mis omab juurdepääsumodifikaatorit "public", "static" ütleb, et
+//                                       // ta on selle klassi oma, tagastustüüp "void" ütleb et adnmeid mete meetod ei tagasta.
+//                                       // ning pärast meetodi omadusi on meetodi nimi "Uusmeetod" peale mida on sulud, kus
+//                                       //parameetreid ei ole
+//                                       //pärast signatuuri on koodiplokk meetodi koodiga {}
+//                                       //antud juhul kuvab konsooli sõnumi
+//                                       //2. tüüpi meetod - tagastab väärtuse
+//int[] arvutatavadarvud = new int[] { 3, 67, 420 }; //Töödeldavad andmeid, mis asuvad täisarvumasiivis, muutujanimega
+//                                                   //"arvutavadarvud.
 
-public static int ArvutaKokku(int[] arvud) //Meetod, mille signatuuriks on juurdepääsuifikaator public static, static
-                                           //ütleb et meetod kuulub siia klassi, tagastustüüp "int" ütleb, et
-                                           //programis väljakutseasukohta tagastatakse täisarv, peale seda on
-                                           //meetodi nimi "ArvutaKokku" ning sulgude vahel ootab meetod täisarvumasiivi
-                                           // millele pannakse meetodi sees ajutine nimi arvud. Peale signatuuri on
-                                           //koodiplokk {} tehtava koodiga.
-{
-    int summa = 0; //tekitatakse täisarvuandmetüüpi muutuja nimega "summa", kuhu esialgu omistatakse arv 0.
+//public static int ArvutaKokku(int[] arvud) //Meetod, mille signatuuriks on juurdepääsuifikaator public static, static
+//                                           //ütleb et meetod kuulub siia klassi, tagastustüüp "int" ütleb, et
+//                                           //programis väljakutseasukohta tagastatakse täisarv, peale seda on
+//                                           //meetodi nimi "ArvutaKokku" ning sulgude vahel ootab meetod täisarvumasiivi
+//                                           // millele pannakse meetodi sees ajutine nimi arvud. Peale signatuuri on
+//                                           //koodiplokk {} tehtava koodiga.
+//{
+//    int summa = 0; //tekitatakse täisarvuandmetüüpi muutuja nimega "summa", kuhu esialgu omistatakse arv 0.
 
-    foreach (int i in arvud) // foreach tsükliga kõik täisarvumassiivi "arvud" arvud läbi.
-    {
-        summa +=i; //ja muutujale summa lisatakse juurde, hetkel käidav element.
-    }
-    return summa;  //pärast tsükli töö lõppu tagastakse "return" käsu abil, muutuja summa sisu.
-}
-}
+//    foreach (int i in arvud) // foreach tsükliga kõik täisarvumassiivi "arvud" arvud läbi.
+//    {
+//        summa +=i; //ja muutujale summa lisatakse juurde, hetkel käidav element.
+//    }
+//    return summa;  //pärast tsükli töö lõppu tagastakse "return" käsu abil, muutuja summa sisu.
+//}
+//}
