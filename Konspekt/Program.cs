@@ -798,58 +798,104 @@ else if (ostusumma < 21 )
 
 
 
-//do 
-//{
-// Console.WriteLine("Mis on sinu 3 lemmiklooma nime?");
+    //do 
+    //{
+    // Console.WriteLine("Mis on sinu 3 lemmiklooma nime?");
 
-//} while
+    //} while
 
-//Console.WriteLine("Palun sisesta oma kasutajanimi");
-//string kasutajanimi = "";
-//do
-//{
-//    kasutajanimi = Console.ReadLine();
-//}
-//while (kasutajanimi != "user1");
-//if (kasutajanimi == "user1")
-//{
-//    int ruudusuurus = 0;
+    //Console.WriteLine("Palun sisesta oma kasutajanimi");
+    //string kasutajanimi = "";
+    //do
+    //{
+    //    kasutajanimi = Console.ReadLine();
+    //}
+    //while (kasutajanimi != "user1");
+    //if (kasutajanimi == "user1")
+    //{
+    //    int ruudusuurus = 0;
 
-//    do
-//    {
-//        Console.WriteLine("Kui suurt ruutu tahad?");
-//        ruudusuurus = int.Parse(Console.ReadLine());
-//    } while (ruudusuurus < 0 && ruudusuurus > 20);
-//    char reakujund = '█';
-//    string üksrida = "";
-//    int tsüklimuutuja = ruudusuurus;
-//    do
-//    {
-//        üksrida += reakujund;
-//        tsüklimuutuja -= 1;
-//    } while (tsüklimuutuja != 0);
-//    tsüklimuutuja = ruudusuurus;
-//    do
-//    {
-//        Console.WriteLine(üksrida);
-//        tsüklimuutuja -= 1;
-//    } while (tsüklimuutuja != 0);
-//    Console.WriteLine($"Palun, siin on sinu ruut, suurusega {ruudusuurus}x{ruudusuurus}");
-//}
+    //    do
+    //    {
+    //        Console.WriteLine("Kui suurt ruutu tahad?");
+    //        ruudusuurus = int.Parse(Console.ReadLine());
+    //    } while (ruudusuurus < 0 && ruudusuurus > 20);
+    //    char reakujund = '█';
+    //    string üksrida = "";
+    //    int tsüklimuutuja = ruudusuurus;
+    //    do
+    //    {
+    //        üksrida += reakujund;
+    //        tsüklimuutuja -= 1;
+    //    } while (tsüklimuutuja != 0);
+    //    tsüklimuutuja = ruudusuurus;
+    //    do
+    //    {
+    //        Console.WriteLine(üksrida);
+    //        tsüklimuutuja -= 1;
+    //    } while (tsüklimuutuja != 0);
+    //    Console.WriteLine($"Palun, siin on sinu ruut, suurusega {ruudusuurus}x{ruudusuurus}");
+    //}
 
 
-//Teksti faili loomine//
+    //Teksti faili loomine//
 
-//using System.IO;
-//string path = @"C:\Users\sandr\Documents\GitHub\text.txt";
-//string content = "hello";
-//File.WriteAllText(path, content);
-//Console.WriteLine("FFaaiill loodud ja sisu kirjutatud");
+    //using System.IO;
+    //string path = @"C:\Users\sandr\Documents\GitHub\text.txt";
+    //string content = "hello";
+    //File.WriteAllText(path, content);
+    //Console.WriteLine("FFaaiill loodud ja sisu kirjutatud");
 
-//Kasutaja saab luua teksti//
+    //Kasutaja saab luua teksti//
 
-//Console.WriteLine("Palun sisestage tekst, mdia soovite faili kirjutada");
-//string userInput = Console.ReadLine();
-//string path = @"C:\Users\sandr\Documents\GitHub\KasutajaTkest.txt";
-//File.WriteAllText(path, userInput);
-//Console.WriteLine("Tkest on faili salvestatud");
+    //Console.WriteLine("Palun sisestage tekst, mdia soovite faili kirjutada");
+    //string userInput = Console.ReadLine();
+    //string path = @"C:\Users\sandr\Documents\GitHub\KasutajaTkest.txt";
+    //File.WriteAllText(path, userInput);
+    //Console.WriteLine("Tkest on faili salvestatud");
+
+    //Ü6
+
+    //string parool;
+    //string nimi;
+    //do
+    //{
+    //    Console.WriteLine("Tere, sisestage parool");
+    //    parool = Console.ReadLine();
+    //    if (parool != "kakaduu")
+    //    {
+    //        Console.WriteLine("Parool on vale");
+    //    }
+    //} while (parool != "kakaduu");
+    //Console.WriteLine("Parool on õige");
+    //do
+    //{
+    //    Console.WriteLine("Sisestage oma nimi");
+    //    nimi = Console.ReadLine();
+    //    if (parool != "sandra")
+    //    {
+    //        Console.WriteLine("Isik pole registreeritud");
+    //    }
+    //} while (nimi != "sandra");
+    //Console.WriteLine("Nimi on õige");
+    //if (parool == "kakaduu" && nimi == "sandra")
+    //{
+    //    string[] nimed = new string[3];
+    //    nimed[0] = "";
+    //    nimed[1] = "";
+    //    nimed[2] = "";
+    //    Console.WriteLine("Mis on sinu 3 lemmiklooma nime? Sisesta nimi 1");
+    //    nimed[0] = Console.ReadLine();
+    //    Console.WriteLine("Sisesta nimi 2");
+    //    nimed[1] = Console.ReadLine();
+    //    Console.WriteLine("Sisesta nimi 3");
+    //    nimed[2] = Console.ReadLine();
+    //    Console.WriteLine("Milline neist on sinu lemmikuim? Sisesta 1, 2 või 3 :)");
+    //    string valik = Console.ReadLine();
+    //    if (int.TryParse(valik, out int numberValik) && numberValik >= 1 && numberValik <= 3)
+    //    {
+    //        int index = numberValik - 1;
+    //        string lemmikuimNimi = nimed[index];
+    //        Console.WriteLine($"Sinu lemmik nimi on:{lemmikuimNimi}! :D");
+    //    }
+    //}
